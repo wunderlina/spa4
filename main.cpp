@@ -1,7 +1,7 @@
 #include <iostream>
-#include "Player.cpp"
-#include "Room.cpp"
-#include "Game.cpp"
+#include "Player.h"
+#include "Room.h"
+#include "Game.h"
 
 int main()
 {
