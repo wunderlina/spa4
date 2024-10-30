@@ -1,4 +1,7 @@
 #include <iostream>
+#include "Player.cpp"
+#include "Room.cpp"
+#include "Game.cpp"
 
 int main()
 {
