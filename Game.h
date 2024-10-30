@@ -5,17 +5,17 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include "room.h"
+#include "Room.h"
 
-class game {
-    room rooms[];
+class Game {
+    Room rooms[];
     void displayHelp();
-    player requestInput(char c);
+    Player requestInput(char c);
 
 public:
     void startGame();
     void endGame();
-    room getRandomRoom();
+    Room getRandomRoom();
 
 };
 

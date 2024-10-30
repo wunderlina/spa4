@@ -4,6 +4,7 @@ project(temp)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(temp main.cpp
-        game.cpp
-        game.h
-        game.h)
+        Game.cpp
+        Game.h
+        Room.h
+        Room.cpp)
