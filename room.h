@@ -4,10 +4,24 @@
 
 #ifndef ROOM_H
 #define ROOM_H
-
+#include <string>
 
 
 class room {
+    room();
+    room *north;
+    room *south;
+    room *east;
+    room *west;
+
+public:
+    void display();
+    std::string getClueText();
+    room getNorth();
+    room getSouth();
+    room getEast();
+    room getWest();
+    void onEnter();
 
 };
 
