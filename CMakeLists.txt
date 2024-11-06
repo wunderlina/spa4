@@ -7,4 +7,5 @@ add_executable(temp main.cpp
         Game.cpp
         Game.h
         Room.h
-        Room.cpp)
+        Room.cpp
+        Player.cpp)
