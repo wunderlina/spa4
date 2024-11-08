@@ -72,7 +72,7 @@ void Player::capture() {
     this->move(game.getRandomRoom());
 }
 void Player::death() {
-    game.endGame();
+    game.endGame(true);
 }
 void Player::loseHeat(int i) {
     this->heat -= i;

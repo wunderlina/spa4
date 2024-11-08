@@ -6,22 +6,24 @@
 #define Room_H
 #include <string>
 
+#include "Player.h"
+
 
 class Room {
-    Room();
     Room *north;
     Room *south;
     Room *east;
     Room *west;
 
 public:
+    Room();
     void display();
     std::string getClueText();
-    Room getNorth();
-    Room getSouth();
-    Room getEast();
-    Room getWest();
-    void onEnter();
+    Room* getNorth();
+    Room* getSouth();
+    Room* getEast();
+    Room* getWest();
+    void onEnter(Player *player);
 
 };
 

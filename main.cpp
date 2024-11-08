@@ -3,8 +3,8 @@
 #include "Room.h"
 #include "Game.h"
 
-int main()
-{
-    std::cout << "Hello, World!" << std::endl;
+int main() {
+    Game game;
+    game.startGame();
     return 0;
 }
