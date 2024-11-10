@@ -17,15 +17,6 @@ void Room::setNeighbors(Room *n,Room *e,Room *s,Room *w) {
     west = w;
 }
 
-Room::~Room() {
-    delete north;
-    delete south;
-    delete east;
-    delete west;
-}
-
-
-
 Room *Room::getNorth() {
     return north;
 }
