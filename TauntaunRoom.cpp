@@ -7,7 +7,7 @@
 using namespace std;
 
 void TauntaunRoom::display() {
-    cout << " O ";
+    cout << " & ";
 }
 
 void TauntaunRoom::onEnter(Player *player) {
