@@ -5,6 +5,7 @@
 #include "Game.h"
 #include "BlasterRoom.h"
 #include <iostream>
+#include <vector>
 using namespace std;
 
 const int NUM_ROOMS = 36;
@@ -97,6 +98,34 @@ void Game::displayHelp() {
 }
 
 char Game::requestInput() {
+    Room* location = player->getLocation();
+    std::vector<int> directions = {1, 2, 3, 4};
+    for(int i = 0; i < directions.size();) {
+        int g = std::rand() % directions.size();
+        switch(directions.at(g)) {
+            case 1:
+                if(location->getNorth() != nullptr) {
+                    std::cout << location->getNorth()->getClueText() << std::endl;
+                }
+            break;
+            case 2:
+                if(location->getEast() != nullptr) {
+                    std::cout << location->getEast()->getClueText() << std::endl;
+                }
+            break;
+            case 3:
+                if(location->getSouth() != nullptr) {
+                    std::cout << location->getSouth()->getClueText() << std::endl;
+                }
+            break;
+            case 4:
+                if(location->getWest() != nullptr) {
+                    std::cout << location->getWest()->getClueText() << std::endl;
+                }
+            break;
+        }
+        directions.erase(directions.begin() + g);
+    }
     string c;
     cout << "Action: ";
     if(player->getLocation()->getNorth() != nullptr) {

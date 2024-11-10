@@ -26,6 +26,7 @@ public:
     Room* getWest();
     virtual void onEnter(Player *player) = 0;
     void setNeighbors(Room *n,Room *e,Room *s,Room *w);
+
 };
 
 

@@ -5,6 +5,7 @@
 #include "Player.h"
 #include <iostream>
 
+
 Player::Player(Game *game, Room *location): game(game), location(location) {
     this->hasLightSaber = false;
     this->blastershots = 5;
@@ -74,6 +75,7 @@ void Player::walk(char c) {
         destination = location->getSouth();
     }
     this->move(destination);
+    this->loseHeat(1);
 }
 void Player::capture() {
     this->move(game->getRandomRoom());
