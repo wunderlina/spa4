@@ -11,7 +11,7 @@ void WampaRoom::display() {
 }
 
 void WampaRoom::onEnter(Player *player) {
-    player->getBlastershots();
+    player->death();
 }
 
 std::string WampaRoom::getClueText() {

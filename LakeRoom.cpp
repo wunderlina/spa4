@@ -12,7 +12,7 @@ void LakeRoom::display() {
 }
 
 void LakeRoom::onEnter(Player *player) {
-    player->loseHeat(5);
+    player->loseHeat(10);
 }
 
 std::string LakeRoom::getClueText() {

@@ -12,7 +12,9 @@ void LightsaberRoom::display() {
 }
 
 void LightsaberRoom::onEnter(Player *player) {
-    player->getBlastershots();
+    if(!player->getHasLightSaber()) {
+        player->pickupLightsaber();
+    }
 }
 
 std::string LightsaberRoom::getClueText() {
