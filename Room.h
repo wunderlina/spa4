@@ -8,6 +8,7 @@
 
 #include "Player.h"
 
+class Player;
 
 class Room {
     Room *north;
@@ -17,16 +18,17 @@ class Room {
 
 public:
     Room();
-    virtual void display();
-    virtual std::string getClueText();
+    virtual ~Room() = 0;
+    virtual void display() = 0;
+    virtual std::string getClueText() = 0;
     Room* getNorth();
     Room* getSouth();
     Room* getEast();
     Room* getWest();
-    virtual void onEnter(Player *player);
+    virtual void onEnter(Player *player) = 0;
 
 };
 
 
 
-#endif Room_H
+#endif //Room_H

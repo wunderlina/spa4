@@ -5,8 +5,8 @@
 #include "Player.h"
 #include <iostream>
 
-Player::Player(Game game, Room location): game(), location() {
-    this->location = location;
+Player::Player(Game &game, Room *location): game(game), location(*location) {
+    this->location = *location;
     this->game = game;
     this->hasLightSaber = false;
     this->blastershots = 5;
@@ -51,9 +51,9 @@ void Player::attack(char c) {
         game.endGame(true);
     }
 }
-void Player::move(Room room) {
-    this->location = room;
-    room.onEnter(this);
+void Player::move(Room *room) {
+    this->location = *room;
+    room->onEnter(this);
 }
 void Player::walk(char c) {
     Room *destination = nullptr;
@@ -66,7 +66,7 @@ void Player::walk(char c) {
     }else if(c == 's') {
         destination = location.getSouth();
     }
-    this->move(*destination);
+    this->move(destination);
 }
 void Player::capture() {
     this->move(game.getRandomRoom());
@@ -88,4 +88,7 @@ bool Player::getHasLightSaber() {
 }
 int Player::getBlastershots() {
     return this->blastershots;
+}
+Room* Player::getLocation() {
+    return &location;
 }

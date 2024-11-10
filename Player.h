@@ -8,6 +8,7 @@
 #include "Game.h"
 #include "Room.h"
 
+class Game;
 
 class Player {
 private:
@@ -17,17 +18,18 @@ private:
     int heat;
     Room &location;
 public:
-    Player(Game game, Room location);
+    Player(Game &game, Room *location);
     void attack(char c);
     void capture();
     void death();
     void loseHeat(int i);
-    void move(Room room);
+    void move(Room *room);
     void pickupAmmo();
     void pickupLightsaber();
     void walk(char c);
     bool getHasLightSaber();
     int getBlastershots();
+    Room* getLocation();
 };
 
 

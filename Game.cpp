@@ -3,6 +3,7 @@
 //
 
 #include "Game.h"
+#include "WampaRoom.h"
 #include <iostream>
 using namespace std;
 
@@ -10,7 +11,7 @@ const int NUM_ROOMS = 36;
 
 void Game::initializeRooms() {
     for (int i = 0; i < NUM_ROOMS; i++) {
-        rooms[i] = new Room();
+        rooms[i] = new WampaRoom();
     }
 }
 
@@ -27,17 +28,28 @@ void Game::displayMap() {
 void Game::processInput(char c) {
     switch (tolower(c)) {
         case 'n':
+            player->walk(c);
+            break;
         case 's':
+            player->walk(c);
+            break;
         case 'e':
+            player->walk(c);
+            break;
         case 'w':
             player->walk(c);
             break;
-        case 'a':
+        case 'b':
+            player->attack(c);
+            break;
+        case 'l':
             player->attack(c);
             break;
         case 'h':
             displayHelp();
             break;
+        case 'q':
+            //TODO
         default:
             cout << "Invalid command" << endl;
             break;
@@ -46,7 +58,7 @@ void Game::processInput(char c) {
 
 Game::Game() {
     initializeRooms();
-    player = new Player(*this, *rooms[0]);
+    player = new Player(*this, rooms[0]);
     isActive = true;
 }
 
@@ -75,13 +87,32 @@ void Game::displayHelp() {
 
 char Game::requestInput() {
     char c;
-    cout << "Enter a command: ";
+    cout << "Action: ";
+    if(player->getLocation()->getNorth() != nullptr) {
+        std::cout << "(n)orth, ";
+    }
+    if(player->getLocation()->getEast() != nullptr) {
+        std::cout << "(e)ast, ";
+    }
+    if(player->getLocation()->getSouth() != nullptr) {
+        std::cout << "(s)outh, ";
+    }
+    if(player->getLocation()->getWest() != nullptr) {
+        std::cout << "(w)est, ";
+    }
+    if(player->getBlastershots() > 0) {
+        std::cout << "(b)laster, ";
+    }
+    if(player->getHasLightSaber()) {
+        std::cout << "(l)ightsaber, ";
+    }
+    cout << "(h)elp, (q)uit: ";
     cin >> c;
     return c;
 }
 
-Room Game::getRandomRoom() {
-    return *rooms[rand() % NUM_ROOMS];
+Room* Game::getRandomRoom() {
+    return rooms[rand() % NUM_ROOMS];
 }
 
 

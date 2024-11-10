@@ -9,4 +9,13 @@ add_executable(temp main.cpp
         Room.h
         Room.cpp
         Player.cpp
-        Player.cpp)
+        Player.cpp
+        BlasterRoom.cpp
+        AmbushRoom.h
+        LakeRoom.h
+        LightsaberRoom.h
+        WampaRoom.h
+        AmbushRoom.cpp
+        WampaRoom.cpp
+        LightsaberRoom.cpp
+        LakeRoom.cpp)
