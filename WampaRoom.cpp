@@ -15,5 +15,5 @@ void WampaRoom::onEnter(Player *player) {
 }
 
 std::string WampaRoom::getClueText() {
-    cout << "you smell a wampa nearby";
+    return "you smell a wampa nearby";
 }

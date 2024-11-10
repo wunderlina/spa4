@@ -11,15 +11,6 @@ Room::Room() {
     west = this - 1;
 }
 
-Room::~Room() {
-    delete north;
-    delete south;
-    delete east;
-    delete west;
-}
-
-
-
 Room *Room::getNorth() {
     return north;
 }

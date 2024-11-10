@@ -16,5 +16,5 @@ void LakeRoom::onEnter(Player *player) {
 }
 
 std::string LakeRoom::getClueText() {
-    cout << "Is that ice or snow?";
+    return "Is that ice or snow?";
 }
