@@ -56,10 +56,10 @@ RM = "C:\Program Files\JetBrains\CLion 2024.2.1\bin\cmake\win\x64\bin\cmake.exe"
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\wunderlina\OneDrive - Milwaukee School of Engineering\Documents\Procedural and OO C++\Labs\Lab4"
+CMAKE_SOURCE_DIR = "C:\Users\wunderlina\OneDrive - Milwaukee School of Engineering\Documents\Procedural and OO C++\OtherPrograms\test"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\wunderlina\OneDrive - Milwaukee School of Engineering\Documents\Procedural and OO C++\Labs\Lab4\cmake-build-debug"
+CMAKE_BINARY_DIR = "C:\Users\wunderlina\OneDrive - Milwaukee School of Engineering\Documents\Procedural and OO C++\OtherPrograms\test\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\wunderlina\OneDrive - Milwaukee School of Engineering\Documents\Procedural and OO C++\Labs\Lab4\cmake-build-debug\CMakeFiles" "C:\Users\wunderlina\OneDrive - Milwaukee School of Engineering\Documents\Procedural and OO C++\Labs\Lab4\cmake-build-debug\\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\wunderlina\OneDrive - Milwaukee School of Engineering\Documents\Procedural and OO C++\OtherPrograms\test\cmake-build-debug\CMakeFiles" "C:\Users\wunderlina\OneDrive - Milwaukee School of Engineering\Documents\Procedural and OO C++\OtherPrograms\test\cmake-build-debug\\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\wunderlina\OneDrive - Milwaukee School of Engineering\Documents\Procedural and OO C++\Labs\Lab4\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\wunderlina\OneDrive - Milwaukee School of Engineering\Documents\Procedural and OO C++\OtherPrograms\test\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -128,6 +128,198 @@ temp/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\temp.dir\build.make CMakeFiles/temp.dir/build
 .PHONY : temp/fast
 
+AmbushRoom.obj: AmbushRoom.cpp.obj
+.PHONY : AmbushRoom.obj
+
+# target to build an object file
+AmbushRoom.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\temp.dir\build.make CMakeFiles/temp.dir/AmbushRoom.cpp.obj
+.PHONY : AmbushRoom.cpp.obj
+
+AmbushRoom.i: AmbushRoom.cpp.i
+.PHONY : AmbushRoom.i
+
+# target to preprocess a source file
+AmbushRoom.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\temp.dir\build.make CMakeFiles/temp.dir/AmbushRoom.cpp.i
+.PHONY : AmbushRoom.cpp.i
+
+AmbushRoom.s: AmbushRoom.cpp.s
+.PHONY : AmbushRoom.s
+
+# target to generate assembly for a file
+AmbushRoom.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\temp.dir\build.make CMakeFiles/temp.dir/AmbushRoom.cpp.s
+.PHONY : AmbushRoom.cpp.s
+
+BlasterRoom.obj: BlasterRoom.cpp.obj
+.PHONY : BlasterRoom.obj
+
+# target to build an object file
+BlasterRoom.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\temp.dir\build.make CMakeFiles/temp.dir/BlasterRoom.cpp.obj
+.PHONY : BlasterRoom.cpp.obj
+
+BlasterRoom.i: BlasterRoom.cpp.i
+.PHONY : BlasterRoom.i
+
+# target to preprocess a source file
+BlasterRoom.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\temp.dir\build.make CMakeFiles/temp.dir/BlasterRoom.cpp.i
+.PHONY : BlasterRoom.cpp.i
+
+BlasterRoom.s: BlasterRoom.cpp.s
+.PHONY : BlasterRoom.s
+
+# target to generate assembly for a file
+BlasterRoom.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\temp.dir\build.make CMakeFiles/temp.dir/BlasterRoom.cpp.s
+.PHONY : BlasterRoom.cpp.s
+
+Game.obj: Game.cpp.obj
+.PHONY : Game.obj
+
+# target to build an object file
+Game.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\temp.dir\build.make CMakeFiles/temp.dir/Game.cpp.obj
+.PHONY : Game.cpp.obj
+
+Game.i: Game.cpp.i
+.PHONY : Game.i
+
+# target to preprocess a source file
+Game.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\temp.dir\build.make CMakeFiles/temp.dir/Game.cpp.i
+.PHONY : Game.cpp.i
+
+Game.s: Game.cpp.s
+.PHONY : Game.s
+
+# target to generate assembly for a file
+Game.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\temp.dir\build.make CMakeFiles/temp.dir/Game.cpp.s
+.PHONY : Game.cpp.s
+
+LakeRoom.obj: LakeRoom.cpp.obj
+.PHONY : LakeRoom.obj
+
+# target to build an object file
+LakeRoom.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\temp.dir\build.make CMakeFiles/temp.dir/LakeRoom.cpp.obj
+.PHONY : LakeRoom.cpp.obj
+
+LakeRoom.i: LakeRoom.cpp.i
+.PHONY : LakeRoom.i
+
+# target to preprocess a source file
+LakeRoom.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\temp.dir\build.make CMakeFiles/temp.dir/LakeRoom.cpp.i
+.PHONY : LakeRoom.cpp.i
+
+LakeRoom.s: LakeRoom.cpp.s
+.PHONY : LakeRoom.s
+
+# target to generate assembly for a file
+LakeRoom.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\temp.dir\build.make CMakeFiles/temp.dir/LakeRoom.cpp.s
+.PHONY : LakeRoom.cpp.s
+
+LightsaberRoom.obj: LightsaberRoom.cpp.obj
+.PHONY : LightsaberRoom.obj
+
+# target to build an object file
+LightsaberRoom.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\temp.dir\build.make CMakeFiles/temp.dir/LightsaberRoom.cpp.obj
+.PHONY : LightsaberRoom.cpp.obj
+
+LightsaberRoom.i: LightsaberRoom.cpp.i
+.PHONY : LightsaberRoom.i
+
+# target to preprocess a source file
+LightsaberRoom.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\temp.dir\build.make CMakeFiles/temp.dir/LightsaberRoom.cpp.i
+.PHONY : LightsaberRoom.cpp.i
+
+LightsaberRoom.s: LightsaberRoom.cpp.s
+.PHONY : LightsaberRoom.s
+
+# target to generate assembly for a file
+LightsaberRoom.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\temp.dir\build.make CMakeFiles/temp.dir/LightsaberRoom.cpp.s
+.PHONY : LightsaberRoom.cpp.s
+
+Player.obj: Player.cpp.obj
+.PHONY : Player.obj
+
+# target to build an object file
+Player.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\temp.dir\build.make CMakeFiles/temp.dir/Player.cpp.obj
+.PHONY : Player.cpp.obj
+
+Player.i: Player.cpp.i
+.PHONY : Player.i
+
+# target to preprocess a source file
+Player.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\temp.dir\build.make CMakeFiles/temp.dir/Player.cpp.i
+.PHONY : Player.cpp.i
+
+Player.s: Player.cpp.s
+.PHONY : Player.s
+
+# target to generate assembly for a file
+Player.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\temp.dir\build.make CMakeFiles/temp.dir/Player.cpp.s
+.PHONY : Player.cpp.s
+
+Room.obj: Room.cpp.obj
+.PHONY : Room.obj
+
+# target to build an object file
+Room.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\temp.dir\build.make CMakeFiles/temp.dir/Room.cpp.obj
+.PHONY : Room.cpp.obj
+
+Room.i: Room.cpp.i
+.PHONY : Room.i
+
+# target to preprocess a source file
+Room.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\temp.dir\build.make CMakeFiles/temp.dir/Room.cpp.i
+.PHONY : Room.cpp.i
+
+Room.s: Room.cpp.s
+.PHONY : Room.s
+
+# target to generate assembly for a file
+Room.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\temp.dir\build.make CMakeFiles/temp.dir/Room.cpp.s
+.PHONY : Room.cpp.s
+
+WampaRoom.obj: WampaRoom.cpp.obj
+.PHONY : WampaRoom.obj
+
+# target to build an object file
+WampaRoom.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\temp.dir\build.make CMakeFiles/temp.dir/WampaRoom.cpp.obj
+.PHONY : WampaRoom.cpp.obj
+
+WampaRoom.i: WampaRoom.cpp.i
+.PHONY : WampaRoom.i
+
+# target to preprocess a source file
+WampaRoom.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\temp.dir\build.make CMakeFiles/temp.dir/WampaRoom.cpp.i
+.PHONY : WampaRoom.cpp.i
+
+WampaRoom.s: WampaRoom.cpp.s
+.PHONY : WampaRoom.s
+
+# target to generate assembly for a file
+WampaRoom.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\temp.dir\build.make CMakeFiles/temp.dir/WampaRoom.cpp.s
+.PHONY : WampaRoom.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -161,6 +353,30 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... temp
+	@echo ... AmbushRoom.obj
+	@echo ... AmbushRoom.i
+	@echo ... AmbushRoom.s
+	@echo ... BlasterRoom.obj
+	@echo ... BlasterRoom.i
+	@echo ... BlasterRoom.s
+	@echo ... Game.obj
+	@echo ... Game.i
+	@echo ... Game.s
+	@echo ... LakeRoom.obj
+	@echo ... LakeRoom.i
+	@echo ... LakeRoom.s
+	@echo ... LightsaberRoom.obj
+	@echo ... LightsaberRoom.i
+	@echo ... LightsaberRoom.s
+	@echo ... Player.obj
+	@echo ... Player.i
+	@echo ... Player.s
+	@echo ... Room.obj
+	@echo ... Room.i
+	@echo ... Room.s
+	@echo ... WampaRoom.obj
+	@echo ... WampaRoom.i
+	@echo ... WampaRoom.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

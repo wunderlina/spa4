@@ -8,6 +8,9 @@
 #include "Player.h"
 #include "Room.h"
 
+class Room;
+class Player;
+
 class Game {
     Room* rooms[36];
     Player* player;
@@ -24,7 +27,7 @@ public:
     void endGame(bool end);
     void displayHelp();
     char requestInput();
-    Room getRandomRoom();
+    Room* getRandomRoom();
 
 };
 

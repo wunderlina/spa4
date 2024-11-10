@@ -16,5 +16,5 @@ void BlasterRoom::onEnter(Player *player) {
 }
 
 std::string BlasterRoom::getClueText() {
-    cout << "A glimmer in the white snow";
+    return "A glimmer in the white snow";
 }

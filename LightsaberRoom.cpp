@@ -16,5 +16,5 @@ void LightsaberRoom::onEnter(Player *player) {
 }
 
 std::string LightsaberRoom::getClueText() {
-    cout << "The force is strong here";
+    return "The force is strong here";
 }

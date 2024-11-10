@@ -16,7 +16,7 @@ void AmbushRoom::onEnter(Player *player) {
 }
 
 string AmbushRoom::getClueText() {
-    cout << "Something doesn't sound quite right...";
+    return "Something doesn't sound quite right...";
 }
 
 

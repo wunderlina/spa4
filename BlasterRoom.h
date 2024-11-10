@@ -16,4 +16,4 @@ public:
 
 
 
-#endif BLASTERROOM_H
+#endif //BLASTERROOM_H
