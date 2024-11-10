@@ -5,9 +5,7 @@
 #include "Player.h"
 #include <iostream>
 
-Player::Player(Game &game, Room *location): game(game), location(*location) {
-    this->location = *location;
-    this->game = game;
+Player::Player(Game *game, Room *location): game(game), location(location) {
     this->hasLightSaber = false;
     this->blastershots = 5;
     this->heat = 50;
@@ -16,16 +14,16 @@ void Player::attack(char c) {
     char direction = 'i';
     while (!(direction == 'n' || direction == 'e' || direction == 's' || direction == 'w')) {
         std::cout << "Choose a direction: ";
-        if(location.getNorth() != nullptr) {
+        if(location->getNorth() != nullptr) {
             std::cout << "(n)orth ";
         }
-        if(location.getEast() != nullptr) {
+        if(location->getEast() != nullptr) {
             std::cout << "(e)ast ";
         }
-        if(location.getSouth() != nullptr) {
+        if(location->getSouth() != nullptr) {
             std::cout << "(s)outh ";
         }
-        if(location.getWest() != nullptr) {
+        if(location->getWest() != nullptr) {
             std::cout << "(w)est ";
         }
         std::cout << std::endl << "-> ";
@@ -39,40 +37,49 @@ void Player::attack(char c) {
     }
     Room* target = nullptr;
     if(direction == 'n') {
-        target = location.getNorth();
+        target = location->getNorth();
     }else if(direction == 'e') {
-        target = location.getEast();
+        target = location->getEast();
     }else if(direction == 's') {
-        target = location.getSouth();
+        target = location->getSouth();
     }else if(direction == 'w') {
-        target = location.getWest();
+        target = location->getWest();
     }
-    if(target->getClueText() == "you smell a wampa nearby") {
-        game.endGame(true);
+    if(target == nullptr) {
+        std::cout << "Invalid command" << std::endl;
+        if(c == 'l') {
+            hasLightSaber = true;
+        }else if(c == 'b') {
+            blastershots += 1;
+        }
+    }else {
+        if(target->getClueText() == "you smell a wampa nearby") {
+            game->endGame(true);
+        }
     }
 }
 void Player::move(Room *room) {
-    this->location = *room;
+    this->location = room;
     room->onEnter(this);
 }
 void Player::walk(char c) {
-    Room *destination = nullptr;
+    Room *destination = location;
     if(c == 'n') {
-        destination = location.getNorth();
+        destination = location->getNorth();
     }else if(c == 'e') {
-        destination = location.getEast();
+        destination = location->getEast();
     }else if(c == 'w') {
-        destination = location.getWest();
+        destination = location->getWest();
     }else if(c == 's') {
-        destination = location.getSouth();
+        destination = location->getSouth();
     }
     this->move(destination);
 }
 void Player::capture() {
-    this->move(game.getRandomRoom());
+    this->move(game->getRandomRoom());
 }
 void Player::death() {
-    game.endGame(true);
+    game->endGame(true);
 }
 void Player::loseHeat(int i) {
     this->heat -= i;
@@ -84,11 +91,11 @@ void Player::pickupLightsaber() {
     this->hasLightSaber = true;
 }
 bool Player::getHasLightSaber() {
-    return this->hasLightSaber;
+    return hasLightSaber;
 }
 int Player::getBlastershots() {
-    return this->blastershots;
+    return blastershots;
 }
 Room* Player::getLocation() {
-    return &location;
+    return location;
 }

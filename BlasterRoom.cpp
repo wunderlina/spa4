@@ -7,12 +7,19 @@
 #include <iostream>
 using namespace std;
 
+BlasterRoom::BlasterRoom() {
+    empty == false;
+}
+
 void BlasterRoom::display() {
     cout << " > ";
 }
 
 void BlasterRoom::onEnter(Player *player) {
-    player->getBlastershots();
+    if (!empty) {
+        player->pickupAmmo();
+        empty = true;
+    }
 }
 
 std::string BlasterRoom::getClueText() {

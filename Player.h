@@ -13,12 +13,12 @@ class Game;
 class Player {
 private:
     int blastershots;
-    Game &game;
+    Game *game;
     bool hasLightSaber;
     int heat;
-    Room &location;
+    Room *location;
 public:
-    Player(Game &game, Room *location);
+    Player(Game *game, Room *location);
     void attack(char c);
     void capture();
     void death();

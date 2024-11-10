@@ -3,7 +3,7 @@
 //
 
 #include "Game.h"
-#include "WampaRoom.h"
+#include "BlasterRoom.h"
 #include <iostream>
 using namespace std;
 
@@ -11,7 +11,26 @@ const int NUM_ROOMS = 36;
 
 void Game::initializeRooms() {
     for (int i = 0; i < NUM_ROOMS; i++) {
-        rooms[i] = new WampaRoom();
+        rooms[i] = new BlasterRoom();
+    }
+    for (int i = 0; i < NUM_ROOMS; i++) {
+        Room* n = nullptr;
+        if(i-6 >= 0) {
+            n = rooms[i-6];
+        }
+        Room* e = nullptr;
+        if((i+1)%6 != 0) {
+            e = rooms[i+1];
+        }
+        Room* s = nullptr;
+        if(i+6 < NUM_ROOMS) {
+            s = rooms[i+6];
+        }
+        Room* w = nullptr;
+        if(i%6 != 0) {
+            w = rooms[i-1];
+        }
+        rooms[i]->setNeighbors(n,e,s, w);
     }
 }
 
@@ -26,39 +45,31 @@ void Game::displayMap() {
 }
 
 void Game::processInput(char c) {
-    switch (tolower(c)) {
-        case 'n':
-            player->walk(c);
-            break;
-        case 's':
-            player->walk(c);
-            break;
-        case 'e':
-            player->walk(c);
-            break;
-        case 'w':
-            player->walk(c);
-            break;
-        case 'b':
-            player->attack(c);
-            break;
-        case 'l':
-            player->attack(c);
-            break;
-        case 'h':
-            displayHelp();
-            break;
-        case 'q':
-            //TODO
-        default:
-            cout << "Invalid command" << endl;
-            break;
+    c = tolower(c);
+    if(c == 'n' && player->getLocation()->getNorth() != nullptr) {
+        player->walk(c);
+    } else if(c == 'e' && player->getLocation()->getEast() != nullptr) {
+        player->walk(c);
+    } else if(c == 's' && player->getLocation()->getSouth() != nullptr) {
+        player->walk(c);
+    } else if(c == 'w' && player->getLocation()->getWest() != nullptr) {
+        player->walk(c);
+    } else if(c == 'b' && player->getBlastershots() > 0) {
+        player->attack(c);
+    } else if(c == 'l' && player->getHasLightSaber()) {
+        player->attack(c);
+    } else if(c == 'h') {
+        displayHelp();
+    } else if(c == 'q') {
+        endGame(false);
+    } else {
+        cout << "Invalid command" << endl;
     }
 }
 
 Game::Game() {
     initializeRooms();
-    player = new Player(*this, rooms[0]);
+    player = new Player(this, rooms[0]);
     isActive = true;
 }
 
@@ -86,7 +97,7 @@ void Game::displayHelp() {
 }
 
 char Game::requestInput() {
-    char c;
+    string c;
     cout << "Action: ";
     if(player->getLocation()->getNorth() != nullptr) {
         std::cout << "(n)orth, ";
@@ -101,14 +112,18 @@ char Game::requestInput() {
         std::cout << "(w)est, ";
     }
     if(player->getBlastershots() > 0) {
-        std::cout << "(b)laster, ";
+        std::cout << "(b)laster [" << player->getBlastershots() << "], ";
     }
     if(player->getHasLightSaber()) {
         std::cout << "(l)ightsaber, ";
     }
-    cout << "(h)elp, (q)uit: ";
-    cin >> c;
-    return c;
+    cout << "(h)elp, (q)uit" << endl << "-> ";
+    std::cin >> c;
+    if(c.size() == 1) {
+        return c.at(0);
+    } else {
+        return '1';
+    }
 }
 
 Room* Game::getRandomRoom() {

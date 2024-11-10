@@ -8,7 +8,9 @@
 
 
 class BlasterRoom: public Room{
+    bool empty;
 public:
+    BlasterRoom();
     void display() override;
     std::string getClueText() override;
     void onEnter(Player *player) override;

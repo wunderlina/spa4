@@ -5,10 +5,16 @@
 #include "Room.h"
 
 Room::Room() {
-    north = this - 6;
-    south = this + 6;
-    east = this + 1;
-    west = this - 1;
+    north = nullptr;
+    east = nullptr;
+    south = nullptr;
+    west = nullptr;
+}
+void Room::setNeighbors(Room *n,Room *e,Room *s,Room *w) {
+    north = n;
+    east = e;
+    south = s;
+    west = w;
 }
 
 Room::~Room() {
