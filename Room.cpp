@@ -3,3 +3,35 @@
 //
 
 #include "Room.h"
+
+Room::Room() {
+    north = this - 6;
+    south = this + 6;
+    east = this + 1;
+    west = this - 1;
+}
+
+Room::~Room() {
+    delete north;
+    delete south;
+    delete east;
+    delete west;
+}
+
+
+
+Room *Room::getNorth() {
+    return north;
+}
+
+Room *Room::getEast() {
+    return east;
+}
+
+Room *Room::getSouth() {
+    return south;
+}
+
+Room *Room::getWest() {
+    return west;
+}

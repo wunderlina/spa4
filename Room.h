@@ -17,16 +17,17 @@ class Room {
 
 public:
     Room();
-    void display();
-    std::string getClueText();
+    virtual ~Room();
+    virtual void display();
+    virtual std::string getClueText();
     Room* getNorth();
     Room* getSouth();
     Room* getEast();
     Room* getWest();
-    void onEnter(Player *player);
+    virtual void onEnter(Player *player);
 
 };
 
 
 
-#endif //Room_H
+#endif Room_H
