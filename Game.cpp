@@ -40,7 +40,7 @@ void Game::displayMap() {
         if (i % 6 == 0) {
             cout << endl;
         }
-        cout << ". ";
+        rooms[i]->display();
     }
     cout << endl;
 }
@@ -61,6 +61,8 @@ void Game::processInput(char c) {
         player->attack(c);
     } else if(c == 'h') {
         displayHelp();
+    } else if(c == 'm') {
+        displayMap();
     } else if(c == 'q') {
         endGame(false);
     } else {
@@ -146,7 +148,7 @@ char Game::requestInput() {
     if(player->getHasLightSaber()) {
         std::cout << "(l)ightsaber, ";
     }
-    cout << "(h)elp, (q)uit" << endl << "-> ";
+    cout << "(h)elp, (m)ap, (q)uit" << endl << "-> ";
     std::cin >> c;
     if(c.size() == 1) {
         return c.at(0);
