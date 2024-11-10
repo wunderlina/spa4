@@ -18,7 +18,6 @@ class Room {
 
 public:
     Room();
-    virtual ~Room() = 0;
     virtual void display() = 0;
     virtual std::string getClueText() = 0;
     Room* getNorth();
