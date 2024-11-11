@@ -18,7 +18,7 @@ void LightsaberRoom::display() {
 void LightsaberRoom::onEnter(Player *player) {
     if (!empty) {
         if(!player->getHasLightSaber()) {
-            cout << "You found a fragile lightsaber!" << endl;
+            cout << "You found a lightsaber!" << endl;
             player->pickupLightsaber();
             empty = true;
         }

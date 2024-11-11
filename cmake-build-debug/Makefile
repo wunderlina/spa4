@@ -56,10 +56,10 @@ RM = "C:\Program Files\JetBrains\CLion 2024.2.1\bin\cmake\win\x64\bin\cmake.exe"
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\wunderlina\OneDrive - Milwaukee School of Engineering\Documents\Procedural and OO C++\OtherPrograms\test"
+CMAKE_SOURCE_DIR = "C:\Users\wunderlina\OneDrive - Milwaukee School of Engineering\Documents\Procedural and OO C++\Labs\Lab4\SPA4"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\wunderlina\OneDrive - Milwaukee School of Engineering\Documents\Procedural and OO C++\OtherPrograms\test\cmake-build-debug"
+CMAKE_BINARY_DIR = "C:\Users\wunderlina\OneDrive - Milwaukee School of Engineering\Documents\Procedural and OO C++\Labs\Lab4\SPA4\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\wunderlina\OneDrive - Milwaukee School of Engineering\Documents\Procedural and OO C++\OtherPrograms\test\cmake-build-debug\CMakeFiles" "C:\Users\wunderlina\OneDrive - Milwaukee School of Engineering\Documents\Procedural and OO C++\OtherPrograms\test\cmake-build-debug\\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\wunderlina\OneDrive - Milwaukee School of Engineering\Documents\Procedural and OO C++\Labs\Lab4\SPA4\cmake-build-debug\CMakeFiles" "C:\Users\wunderlina\OneDrive - Milwaukee School of Engineering\Documents\Procedural and OO C++\Labs\Lab4\SPA4\cmake-build-debug\\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\wunderlina\OneDrive - Milwaukee School of Engineering\Documents\Procedural and OO C++\OtherPrograms\test\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\wunderlina\OneDrive - Milwaukee School of Engineering\Documents\Procedural and OO C++\Labs\Lab4\SPA4\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -175,6 +175,30 @@ BlasterRoom.s: BlasterRoom.cpp.s
 BlasterRoom.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\temp.dir\build.make CMakeFiles/temp.dir/BlasterRoom.cpp.s
 .PHONY : BlasterRoom.cpp.s
+
+DefaultRoom.obj: DefaultRoom.cpp.obj
+.PHONY : DefaultRoom.obj
+
+# target to build an object file
+DefaultRoom.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\temp.dir\build.make CMakeFiles/temp.dir/DefaultRoom.cpp.obj
+.PHONY : DefaultRoom.cpp.obj
+
+DefaultRoom.i: DefaultRoom.cpp.i
+.PHONY : DefaultRoom.i
+
+# target to preprocess a source file
+DefaultRoom.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\temp.dir\build.make CMakeFiles/temp.dir/DefaultRoom.cpp.i
+.PHONY : DefaultRoom.cpp.i
+
+DefaultRoom.s: DefaultRoom.cpp.s
+.PHONY : DefaultRoom.s
+
+# target to generate assembly for a file
+DefaultRoom.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\temp.dir\build.make CMakeFiles/temp.dir/DefaultRoom.cpp.s
+.PHONY : DefaultRoom.cpp.s
 
 Game.obj: Game.cpp.obj
 .PHONY : Game.obj
@@ -296,6 +320,30 @@ Room.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\temp.dir\build.make CMakeFiles/temp.dir/Room.cpp.s
 .PHONY : Room.cpp.s
 
+TauntaunRoom.obj: TauntaunRoom.cpp.obj
+.PHONY : TauntaunRoom.obj
+
+# target to build an object file
+TauntaunRoom.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\temp.dir\build.make CMakeFiles/temp.dir/TauntaunRoom.cpp.obj
+.PHONY : TauntaunRoom.cpp.obj
+
+TauntaunRoom.i: TauntaunRoom.cpp.i
+.PHONY : TauntaunRoom.i
+
+# target to preprocess a source file
+TauntaunRoom.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\temp.dir\build.make CMakeFiles/temp.dir/TauntaunRoom.cpp.i
+.PHONY : TauntaunRoom.cpp.i
+
+TauntaunRoom.s: TauntaunRoom.cpp.s
+.PHONY : TauntaunRoom.s
+
+# target to generate assembly for a file
+TauntaunRoom.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\temp.dir\build.make CMakeFiles/temp.dir/TauntaunRoom.cpp.s
+.PHONY : TauntaunRoom.cpp.s
+
 WampaRoom.obj: WampaRoom.cpp.obj
 .PHONY : WampaRoom.obj
 
@@ -359,6 +407,9 @@ help:
 	@echo ... BlasterRoom.obj
 	@echo ... BlasterRoom.i
 	@echo ... BlasterRoom.s
+	@echo ... DefaultRoom.obj
+	@echo ... DefaultRoom.i
+	@echo ... DefaultRoom.s
 	@echo ... Game.obj
 	@echo ... Game.i
 	@echo ... Game.s
@@ -374,6 +425,9 @@ help:
 	@echo ... Room.obj
 	@echo ... Room.i
 	@echo ... Room.s
+	@echo ... TauntaunRoom.obj
+	@echo ... TauntaunRoom.i
+	@echo ... TauntaunRoom.s
 	@echo ... WampaRoom.obj
 	@echo ... WampaRoom.i
 	@echo ... WampaRoom.s

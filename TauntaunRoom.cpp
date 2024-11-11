@@ -13,9 +13,8 @@ void TauntaunRoom::display() {
 void TauntaunRoom::onEnter(Player *player) {
     if (player->getHasLightSaber()) {
         cout << "You use your lightsaber to slice open the tauntaun and climb inside to get warm" << endl;
-        cout << "You feel your body temperature rise, but your lightsaber has broken" << endl;
-        player->loseHeat(-10);
-        player->loseLightsaber();
+        cout << "You feel your body temperature rise" << endl;
+        player->loseHeat(-40);
     } else {
         cout << "You find a tauntaun, but you have nothing to cut it open with" << endl;
     }

@@ -135,11 +135,11 @@ void Game::startGame() {
         char input = requestInput();
         processInput(input);
     }
+    cout << "Exiting game" << endl;
 }
 
 void Game::endGame(bool end) {
     isActive = false;
-    cout << "Exiting game" << endl;
 }
 
 void Game::displayHelp() {
@@ -162,11 +162,11 @@ void Game::displayHelp() {
     cout << "yourself down, but if not, you will die of low temperature.\n\n";
 
     cout << "Weapons/Tools:\n";
-    cout << "Blaster - You start with a blaster with 5 shots, and you can find one more\n";
+    cout << "Blaster - You start with a blaster with 3 shots, and you can find one more\n";
     cout << "in the cave system. The blaster will kill the Wampa if you shoot it.\n";
-    cout << "Lightsaber - You can find a fragile lightsaber in the cave system.\n";
+    cout << "Lightsaber - You can find a lightsaber in the cave system.\n";
     cout << "You can use it to free yourself from ice, cut open a tauntaun, or swing\n";
-    cout << "at the Wampa. Be careful, however, as after one use it will break.\n\n";
+    cout << "at the Wampa. Be careful, it is easy to lose.\n\n";
 
     cout << "Map: A 6x6 square with randomly generating hazard rooms, item rooms,\n";
     cout << "and Wampa rooms.\n";

@@ -11,7 +11,7 @@ void DefaultRoom::display() {
 }
 
 void DefaultRoom::onEnter(Player *player) {
-    cout << "You get a little colder, but you're relatively safe for now" << endl;
+    std::cout << "You enter a barren cavern, nothing but snow and ice here" << std::endl;
     player->loseHeat(2);
 }
 

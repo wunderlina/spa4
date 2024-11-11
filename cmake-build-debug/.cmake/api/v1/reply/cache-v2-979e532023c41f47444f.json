@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/wunderlina/OneDrive - Milwaukee School of Engineering/Documents/Procedural and OO C++/OtherPrograms/test/cmake-build-debug"
+			"value" : "c:/Users/wunderlina/OneDrive - Milwaukee School of Engineering/Documents/Procedural and OO C++/Labs/Lab4/SPA4/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -559,7 +559,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/wunderlina/OneDrive - Milwaukee School of Engineering/Documents/Procedural and OO C++/OtherPrograms/test/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/wunderlina/OneDrive - Milwaukee School of Engineering/Documents/Procedural and OO C++/Labs/Lab4/SPA4/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -631,7 +631,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/wunderlina/OneDrive - Milwaukee School of Engineering/Documents/Procedural and OO C++/OtherPrograms/test"
+			"value" : "C:/Users/wunderlina/OneDrive - Milwaukee School of Engineering/Documents/Procedural and OO C++/Labs/Lab4/SPA4"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1279,7 +1279,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/wunderlina/OneDrive - Milwaukee School of Engineering/Documents/Procedural and OO C++/OtherPrograms/test/cmake-build-debug"
+			"value" : "C:/Users/wunderlina/OneDrive - Milwaukee School of Engineering/Documents/Procedural and OO C++/Labs/Lab4/SPA4/cmake-build-debug"
 		},
 		{
 			"name" : "temp_IS_TOP_LEVEL",
@@ -1303,7 +1303,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/wunderlina/OneDrive - Milwaukee School of Engineering/Documents/Procedural and OO C++/OtherPrograms/test"
+			"value" : "C:/Users/wunderlina/OneDrive - Milwaukee School of Engineering/Documents/Procedural and OO C++/Labs/Lab4/SPA4"
 		}
 	],
 	"kind" : "cache",

@@ -60,7 +60,9 @@
 				11,
 				12,
 				13,
-				14
+				14,
+				15,
+				16
 			]
 		}
 	],
@@ -105,7 +107,9 @@
 				11,
 				12,
 				13,
-				14
+				14,
+				15,
+				16
 			]
 		},
 		{
@@ -205,6 +209,18 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "LakeRoom.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "TauntaunRoom.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "DefaultRoom.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],
