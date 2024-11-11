@@ -14,7 +14,7 @@ class Player;
 class Game {
     Room* rooms[36];
     Player* player;
-    bool isActive;
+    bool isActive = true;
 
     void initializeRooms();
     void displayMap();

@@ -8,7 +8,7 @@
 using namespace std;
 
 void AmbushRoom::display() {
-    cout << " * ";
+    cout << " A ";
 }
 
 void AmbushRoom::onEnter(Player *player) {

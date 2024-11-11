@@ -12,11 +12,12 @@ BlasterRoom::BlasterRoom() {
 }
 
 void BlasterRoom::display() {
-    cout << " > ";
+    cout << " B ";
 }
 
 void BlasterRoom::onEnter(Player *player) {
     if (!empty) {
+        cout << "You found a shot for your blaster!" << endl;
         player->pickupAmmo();
         empty = true;
     }

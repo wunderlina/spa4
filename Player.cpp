@@ -55,7 +55,13 @@ void Player::attack(char c) {
         }
     }else {
         if(target->getClueText() == "you smell a wampa nearby") {
+            std::cout << "You have killed the wampa, congratulations!" << std::endl;
             game->endGame(true);
+        } else {
+            std::cout << "You have missed your target" << std::endl;
+            if (c == 'l') {
+                std::cout << "You have lost your lightsaber" << std::endl;
+            }
         }
     }
 }
@@ -79,6 +85,17 @@ void Player::walk(char c) {
 }
 void Player::capture() {
     this->move(game->getRandomRoom());
+    if (hasLightSaber) {
+        std::cout << "You have been captured by the wampa, but you are able to free yourself with your lightsaber" << std::endl;
+        std::cout << "However, you have lost your lightsaber in the process" << std::endl;
+        std::cout << std::endl;
+        hasLightSaber = false;
+    }else {
+        std::cout << "You have been captured by the wampa, with no way to free yourself" << std::endl;
+        std::cout << "You freeze to death hanging from the ceiling" << std::endl;
+        std::cout << std::endl;
+        game->endGame(true);
+    }
 }
 void Player::death() {
     game->endGame(true);
@@ -91,6 +108,9 @@ void Player::pickupAmmo() {
 }
 void Player::pickupLightsaber() {
     this->hasLightSaber = true;
+}
+void Player::loseLightsaber() {
+    this->hasLightSaber = false;
 }
 bool Player::getHasLightSaber() {
     return hasLightSaber;

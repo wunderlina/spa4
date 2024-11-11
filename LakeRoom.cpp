@@ -8,10 +8,12 @@
 using namespace std;
 
 void LakeRoom::display() {
-    cout << " O ";
+    cout << " P ";
 }
 
 void LakeRoom::onEnter(Player *player) {
+    cout << "You fall through a thin layer of ice and into the freezing water!" << endl;
+    cout << "You get out ok but your temperature drops." << endl;
     player->loseHeat(10);
 }
 

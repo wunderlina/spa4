@@ -7,13 +7,21 @@
 #include <iostream>
 using namespace std;
 
+LightsaberRoom::LightsaberRoom() {
+    empty = false;
+}
+
 void LightsaberRoom::display() {
-    cout << " | ";
+    cout << " L ";
 }
 
 void LightsaberRoom::onEnter(Player *player) {
-    if(!player->getHasLightSaber()) {
-        player->pickupLightsaber();
+    if (!empty) {
+        if(!player->getHasLightSaber()) {
+            cout << "You found a fragile lightsaber!" << endl;
+            player->pickupLightsaber();
+            empty = true;
+        }
     }
 }
 

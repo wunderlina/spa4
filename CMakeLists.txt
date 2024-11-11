@@ -18,4 +18,6 @@ add_executable(temp main.cpp
         AmbushRoom.cpp
         WampaRoom.cpp
         LightsaberRoom.cpp
-        LakeRoom.cpp)
+        LakeRoom.cpp
+        TauntaunRoom.cpp
+        DefaultRoom.cpp)

@@ -8,7 +8,9 @@
 
 
 class LightsaberRoom: public Room{
+    bool empty;
 public:
+    LightsaberRoom();
     void display() override;
     std::string getClueText() override;
     void onEnter(Player *player) override;

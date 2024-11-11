@@ -26,6 +26,7 @@ public:
     void move(Room *room);
     void pickupAmmo();
     void pickupLightsaber();
+    void loseLightsaber();
     void walk(char c);
     bool getHasLightSaber();
     int getBlastershots();
