@@ -70,6 +70,12 @@ void Player::move(Room *room) {
     room->onEnter(this);
 }
 void Player::walk(char c) {
+    this->loseHeat(1);
+    if(heat > 10) {
+        std::cout << "You get a little colder, but you're relatively safe for now" << std::endl;
+    } else {
+        std::cout << "You get a little colder, you will soon freeze!" << std::endl;
+    }
     Room *destination = location;
     if(c == 'n') {
         destination = location->getNorth();
@@ -81,13 +87,6 @@ void Player::walk(char c) {
         destination = location->getSouth();
     }
     this->move(destination);
-
-    this->loseHeat(1);
-    if(heat > 10) {
-        std::cout << "You get a little colder, but you're relatively safe for now" << std::endl;
-    } else {
-        std::cout << "You get a little colder, you will soon freeze!" << std::endl;
-    }
 }
 void Player::capture() {
     this->move(game->getRandomRoom());
@@ -109,6 +108,7 @@ void Player::death() {
 void Player::loseHeat(int i) {
     this->heat -= i;
     if(heat <= 0) {
+        std::cout << "You feel your blood turn to ice, you freeze to death" << std::endl;
         death();
     }
     if(heat > 30) {
